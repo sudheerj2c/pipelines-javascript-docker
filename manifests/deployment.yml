@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sudheerjcpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sudheerjcpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sudheerjcpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sudheerjcpipelinesjavascriptdocker 
+          image: sudheeracrregistry.azurecr.io/sudheerjcpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
